@@ -1,0 +1,83 @@
+*.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.navbar {
+    background-color: #461D7C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+}
+.nav-link {
+    margin: 15px;
+    padding: 5px;
+    /* margin: 10px; */
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+.nav-link:hover {
+    color: #FDD023;
+}
+
+.container {
+  margin: 1%;
+  padding: 1%;
+}
+.card {
+  background-color: gainsboro;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 40px;
+  width: fit-content;
+  border-radius: 25px;
+}
+.list {
+  padding-top: 10px;
+  padding-top: 10px;
+}
+
+
+
+
+a.button {
+  margin: 10px;
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+a.example {
+  background-color: rgb(255, 248, 208);
+}
+a.exit {
+  background-color: rgb(255, 208, 208);
+}
+a.firstOnRow {
+  margin-left: 0px;
+}
+a.lastOnRow {
+  margin-right: 0px;
+}
+a.button:hover {
+  background-color: rgb(255, 233, 109);
+}
+a.exit:hover {
+  background-color: rgb(255, 109, 109);
+}
+
+h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+  
