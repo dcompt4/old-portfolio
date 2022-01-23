@@ -5,26 +5,33 @@
     -ms-user-select: none;
     user-select: none;
 }
+
 .navbar {
     background-color: #461D7C;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
 }
 .nav-link {
-    margin: 15px;
-    padding: 5px;
-    /* margin: 10px; */
     color: white;
-    text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
-    font-size: large;
+}
+.navbar-brand {
+    color: #FDD023;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    letter-spacing: .5rem;
+}
+.navbar-brand:hover {
+    color: #FDD023;
 }
 .nav-link:hover {
     color: #FDD023;
 }
+.nav-link.disabled:hover {
+    color: #6c757d;
+}
+.navbar-toggler-icon {
+    color: #FDD023;
+}
+
 
 .container {
   margin: 1%;
