@@ -8,13 +8,22 @@ $(document).ready(function(){
     });
 
     $('.sort-button').on("click", function() {
-        var sort = this.id + "-container";
 
-        $('.sort-button').removeClass('active');
-        $(this).addClass('active');
+        if(this.id == 'everything') {
+            
+            $('.sort-button').removeClass('active');
+            $(this).addClass('active');
 
-        $('.tab-container').removeClass('active');
-        $('#' + sort).addClass('active');
+            $('.tab-container').addClass('active');
+        } else {
+            var sort = this.id + "-container";
+
+            $('.sort-button').removeClass('active');
+            $(this).addClass('active');
+    
+            $('.tab-container').removeClass('active');
+            $('#' + sort).addClass('active');
+        }
 
     });
 
