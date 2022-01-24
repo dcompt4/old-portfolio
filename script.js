@@ -6,4 +6,18 @@ $(document).ready(function(){
 
         $(this).addClass('active');
     });
+
+    $('.sort-button').on("click", function() {
+        var sort = this.id + "-container";
+
+        $('.sort-button').removeClass('active');
+        $(this).addClass('active');
+
+        $('.tab-container').removeClass('active');
+        $('#' + sort).addClass('active');
+
+    });
+
+
+
 });

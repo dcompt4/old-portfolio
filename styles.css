@@ -8,17 +8,17 @@ My-yellow : #FAED6A
 */
 
 :root {
-    --darker-color: #040005;
-    --dark-color: #241929;
-    --third-color: #230031;
-    --fourth-color: #230031;
+    --darkest-color: #040005;
+    --darker-color: #241929;
+    --dark-color: #493652;
+    --darkish-color: #775d83;
     --light-color: #c0a9c9;
     --lighter-color: #f4dbfd;
 }
 
 
 .navbar {
-    background-color: var(--dark-color);
+  background-image: linear-gradient(to bottom right, var(--dark-color), var(--darkish-color));
 }
 .nav-link {
     color: var(--lighter-color);
@@ -48,19 +48,24 @@ My-yellow : #FAED6A
     color: var(--lighter-color);
 }
 
+html, body {
+  min-height: 100%;
+}
+
 body {
-    background-color: var(--darker-color);
+  min-height: 100%;
+    background-image: linear-gradient(to bottom right, var(--darkest-color), var(--darker-color));
     font-family: 'Courier New', Courier, monospace;
 }
 
 .container {
   margin: 1%;
   padding: 1%;
-  background-color: var(--dark-color);
+  background-image: linear-gradient(to bottom right, var(--dark-color), var(--darkish-color));
   border-radius: 5px;
 }
 .container-fluid {
-  background-color: var(--darker-color);
+  background-color: transparent;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -69,9 +74,20 @@ body {
 .btn-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 2%;
 }
+.tab-container {
+  display: none;
+}
+.tab-container.active {
+  display: block;
+}
 
+
+.btn-container button {
+  margin: 10px;
+}
 .btn-outline-primary {
   font-family: 'Courier New', Courier, monospace;
   color:var(--lighter-color);
@@ -101,6 +117,11 @@ p, h1, h2, h3, h4, h5, h6 {
   color: var(--lighter-color);
   font-family: 'Courier New', Courier, monospace;
 }
+.container span {
+  color: var(--lighter-color);
+  margin-left: 1%;
+  margin-right: 1%;
+}
 
 
 
@@ -111,7 +132,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 footer {
-  background-color: var(--dark-color);
+  background-image: linear-gradient(to bottom right, var(--dark-color), var(--darkish-color));
   position: absolute;
   left: 0;
   bottom: 0;
@@ -120,16 +141,14 @@ footer {
   display: flex;
   justify-content: center;
   vertical-align: center;
+  flex-wrap: wrap;
 }
 footer small, footer svg, footer span {
   color: var(--lighter-color);
   padding: 5px;
 }
-footer small {
-  margin-right: 2%;
-}
-footer svg, footer span {
-  margin-left: 2%;
+footer div.row {
+  margin: 0 1%;
 }
 
   
