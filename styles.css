@@ -26,6 +26,7 @@ My-yellow : #FAED6A
     font-weight: bolder;
 }
 .navbar-brand {
+  font-size: 2vw;
     cursor: default;
     color: var(--lighter-color);
     font-family: 'Courier New', Courier, monospace;
