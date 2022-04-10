@@ -123,7 +123,7 @@ body {
   margin-top: 100px; /* Add a top margin to avoid content overlay */
 }
 
-.main h3 {
+.main h3, .main h4 {
   font-weight: bold;
   color: #229ad3;
 }
@@ -158,8 +158,6 @@ hr {
 .container {
   margin: 1%;
   padding: 1%;
-  /* background-image: linear-gradient(to bottom right, var(--card-color), var(--carder-color)); */
-  border-radius: 5px;
 }
 .container-fluid {
   margin-bottom: 1%;
