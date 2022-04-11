@@ -54,14 +54,19 @@
   justify-content: center;
 }
 
-#navbarTogglerDemo02 {
-  display: none !important;
+
+#navbarTogglerDemo02.show {
+  display: block !important;
 }
 
-@media (hover: none) {
+@media (pointer: fine) {
   #navbarTogglerDemo02 {
-    display: block !important;
+    display: none !important;
   }
+}
+
+
+@media (hover: none) {
   .navbar-content-left {
     display: none !important;
     justify-content: left;
@@ -315,4 +320,20 @@ footer small, footer svg, footer span {
 }
 footer div.row {
   margin: 0 1%;
+}
+
+
+
+
+
+
+
+
+
+.title-row {
+  align-items: center;
+}
+.title-row h3{
+  padding: 0;
+  margin: 0;
 }
