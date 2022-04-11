@@ -1,5 +1,8 @@
 let circles = [];
 let paused = false;
+let deep = false;
+let controls = true;
+let bounce = true;
 let timer = 0;
 // Initial white background
 bgColor = 255;
@@ -57,7 +60,9 @@ function setup() {
 }
   
 function draw() {
-    background(bgColor);
+    if(!deep) {
+        background(bgColor);
+    }
 
     if(paused) {
         for(let i = 0; i < numCircles; i++) {
@@ -78,17 +83,27 @@ function draw() {
         circles[i].draw();
     }
 
-    push();
-    fill(antiColor);
-    textSize(20);
-    text(round(frameRate()) + ' fps', 5, 25);
-    text('Press \'CTRL\' for controls', 5, 50);
 
+    if(controls) {
 
-    pop();
+        push();
+        fill(antiColor);
+        textSize(16);
+        text(round(frameRate()) + ' fps', 5, 25);
+        text('Press \'CTRL\' for panel', 5, 50);
+        text('Press \'D\' to fade canvas', 5, 75);
+        text('Press \'C\' to hide controls', 5, 100);
+        pop();
+
+    }
+
+    
 
     timer ++;
 
+    if(deep) {
+        background(bgColor, 200);
+    }
 }
 
 function mouseClicked() {
@@ -113,11 +128,33 @@ function keyPressed() {
         paused = false;
     }
 
+    if(keyCode == 68 && !deep) {
+        deep = true;
+    } else if(keyCode == 68 && deep) {
+        deep = false;
+    }
+
+    if(keyCode == 67 && !controls) {
+        controls = true;
+    } else if(keyCode == 67 && controls) {
+        controls = false;
+    }
+
+    if(keyCode == 66 && !bounce) {
+        bounce = true;
+    } else if(keyCode == 66 && bounce) {
+        bounce = false;
+    }
+
     // Launch customize form with Tab key
     if(keyCode == 17) {
         paused = true;
         document.getElementById('myForm').style.display = 'block';
     }
+
+    
+
+    console.log(keyCode);
 
 }
 
@@ -160,17 +197,35 @@ class Circle {
         this.x += this.speedX;
         this.y += this.speedY;
     
-        if(this.x > window.innerWidth + this.size) {
+        if(this.x >= window.innerWidth + this.size) {
             this.x = -this.size;
         }
-        if(this.x < -this.size) {
+        if(this.x <= -this.size) {
             this.x = window.innerWidth + this.size;
         }
-        if(this.y > window.innerHeight + this.size) {
+        if(this.y >= window.innerHeight + this.size) {
             this.y = -this.size;
         }
-        if(this.y < -this.size) {
+        if(this.y <= -this.size) {
             this.y = window.innerHeight + this.size;
         }
+    
+
+        // Tried to make the balls bounce as well
+
+        // if(this.x >= window.innerWidth - this.size) {
+        //     this.speedX = -this.speedX;
+        // }
+        // if(this.x <= this.size) {
+        //     this.speedX = -this.speedX;
+        // }
+        // if(this.y >= window.innerHeight - this.size) {
+        //     this.speedY = -this.speedY;
+        // }
+        // if(this.y <= this.size) {
+        //     this.speedY = -this.speedY;
+        // }
+
+       
     }
 }

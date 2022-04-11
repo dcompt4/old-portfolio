@@ -1,0 +1,13 @@
+
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgba(110, 110, 110, 0.5);
+}
+
+.carousel-indicators .active {
+    background-color: rgb(223, 223, 223);
+}
+
+.carousel-indicators li {
+    background-color: rgba(139, 139, 139, 0.5);
+}
